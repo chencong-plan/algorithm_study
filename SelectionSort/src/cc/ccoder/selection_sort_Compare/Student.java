@@ -19,9 +19,9 @@ public class Student implements Comparable<Student> {
         if (this.score.equals(o.score)) {
             return this.name.compareTo(o.name);
         } else if (this.score < o.score) {
-            return -1;
-        } else if (this.score > o.score) {
             return 1;
+        } else if (this.score > o.score) {
+            return -1;
         } else {
             return 0;
         }
