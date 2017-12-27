@@ -27,8 +27,8 @@ public class SelectionSort {
 
     public static void main(String[] args) {
         // 测试SortTestHelper辅助方法
-        int N = 100000;
-        Integer[] array = SortTestHelper.generateRandomArray(N, 0, 1000000);
+        int N = 10000;
+        Integer[] array = SortTestHelper.generateRandomArray(N, 0, 100000);
         SortTestHelper.testSort(SelectionSort.class, array);
 
     }
