@@ -57,6 +57,37 @@ public class SortTestHelper {
     }
 
     /**
+     * 生成一个近乎于有序的数组
+     * 首先生成一个含有[0,n-1]的完全有序的数组，之后随机交换swapTimes次
+     * swapTimes 定义了数组的无序程度
+     * swapTimes == 0 时候数组完全有序
+     * swapTimes 越大 数组越趋向于无序
+     *
+     * @param n         定义数组长度
+     * @param swapTimes 数组无序程度
+     * @return 返回一个无序程度为swapTimes的数组
+     */
+    public static Integer[] generateNearlyOrderedArray(int n, int swapTimes) {
+        if (n < 0 || swapTimes < 0) {
+            throw new IllegalArgumentException("参数不合法," + n + " " + swapTimes);
+        }
+        Integer[] array = new Integer[n];
+        for (int i = 0; i < n; i++) {
+            array[i] = i;
+        }
+        // 随机交换数组当中两个位置的元素
+        for (int i = 0; i < swapTimes; i++) {
+            int a = (int) (Math.random() * n);
+            int b = (int) (Math.random() * n);
+            int t = array[a];
+            array[a] = array[b];
+            array[b] = t;
+        }
+        return array;
+
+    }
+
+    /**
      * 测试clazz所对应的排序算法排序数组array所得到正确性和算法运行时间
      *
      * @param clazz 将要使用的排序算法

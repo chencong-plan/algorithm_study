@@ -1,5 +1,7 @@
 package cc.ccoder.insertion_sort_advance;
 
+import org.omg.CORBA.INTERNAL;
+
 import java.util.Arrays;
 
 /**
@@ -10,11 +12,13 @@ public class Main {
 
     private static final int N = 100000;
     private static final int RANGE_L = 0;
-    private static final int RANGE_R = 1000000;
+    private static final int RANGE_R = 100;
 
     public static void main(String[] args) {
         // 生成指定的长度的数组  边界为[RANGE_L,RANGE_R]
-        Integer[] arrayInsertion = SortTestHelper.generateRandomArray(N, RANGE_L, RANGE_R);
+//        Integer[] arrayInsertion = SortTestHelper.generateRandomArray(N, RANGE_L, RANGE_R);
+//        Integer[] arraySelection = Arrays.copyOf(arrayInsertion, arrayInsertion.length);
+        Integer[] arrayInsertion = SortTestHelper.generateNearlyOrderedArray(N, 10);
         Integer[] arraySelection = Arrays.copyOf(arrayInsertion, arrayInsertion.length);
         SortTestHelper.testSort(InsertionSort.class, arrayInsertion);
         SortTestHelper.testSort(SelectionSort.class, arraySelection);
