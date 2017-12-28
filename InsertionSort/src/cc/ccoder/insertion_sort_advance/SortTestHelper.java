@@ -1,15 +1,13 @@
-package cc.ccoder;
+package cc.ccoder.insertion_sort_advance;
 
 import java.lang.reflect.Method;
 
 /**
  * @author : ChenCong
- * @date : Created in 17:22 2017/12/27
+ * @date : Created in 17:32 2017/12/28
  */
 public class SortTestHelper {
 
-    private SortTestHelper() {
-    }
 
     /**
      * 生成有n个元素的数组，每个元素的范围是[rangL,rangR]区间
@@ -66,7 +64,7 @@ public class SortTestHelper {
      */
     public static void testSort(Class<?> clazz, Comparable[] array) {
         try {
-            Method sortMethod = clazz.getMethod("sort", Comparable.class);
+            Method sortMethod = clazz.getMethod("sort", Comparable[].class);
             // 参数只有一个，就是将要排序的数组
             Object[] params = new Object[]{array};
             // 开始计数
