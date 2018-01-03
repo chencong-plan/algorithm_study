@@ -75,3 +75,6 @@ public class SortTestHelper {
 
 #### 计算排序时间
 编写排序测试类，计算排序时间及判断排序是否正确。详细见`selection_sort_performance`当中的`SortTestHelper`类。
+
+#### 算法代码讲解
+具体的算法代码讲解，详细见我的博客 文章[算法篇——选择排序SelectionSort](https://ccoder.cc/2017/12/20/selection-sort/)
