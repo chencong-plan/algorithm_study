@@ -8,11 +8,6 @@ import java.util.Arrays;
  */
 public class Main {
 
-
-    /**
-     * 测试
-     * @param args
-     */
     public static void main(String[] args) {
         int n = 50000;
         Integer[] mergeArray = SortTestHelper.generateRandomArray(n, 0, n);
@@ -21,5 +16,7 @@ public class Main {
         SortTestHelper.testSort(MergeSort.class, mergeArray);
         SortTestHelper.testSort(InsertionSort.class, insertionArray);
         SortTestHelper.testSort(SelectionSort.class, selectionArray);
+
+
     }
 }
